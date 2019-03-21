@@ -1,6 +1,6 @@
 <?php
 
-namespace Mgoigfer\SpotifyAuthResourceTool\Models;
+namespace Binalogue\SpotifyAuthTool\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;

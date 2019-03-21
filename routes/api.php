@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Mgoigfer\SpotifyAuthResourceTool\Http\Controllers\SpotifyUserController;
+use Binalogue\SpotifyAuthTool\Http\Controllers\SpotifyUserController;
 
 /*
 |--------------------------------------------------------------------------

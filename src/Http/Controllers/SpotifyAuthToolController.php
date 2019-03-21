@@ -1,11 +1,11 @@
 <?php
 
-namespace Mgoigfer\SpotifyAuthResourceTool\Http\Controllers;
+namespace Binalogue\SpotifyAuthTool\Http\Controllers;
 
 use Illuminate\Routing\Controller;
-use Mgoigfer\SpotifyAuthResourceTool\Models\SpotifyUser;
+use Binalogue\SpotifyAuthTool\Models\SpotifyUser;
 
-class SpotifyAuthResourceToolController extends Controller
+class SpotifyAuthToolController extends Controller
 {
     /*
     |--------------------------------------------------------------------------
@@ -22,7 +22,7 @@ class SpotifyAuthResourceToolController extends Controller
     {
         $spotify = app()
             ->make('SpotifyWrapper', [
-                'callback' => '/nova-vendor/nova-spotify-auth-resource-tool/auth',
+                'callback' => '/nova-vendor/nova-spotify-auth-tool/auth',
                 'scope' => [],
                 'show_dialog' => true,
             ])
@@ -40,6 +40,6 @@ class SpotifyAuthResourceToolController extends Controller
             ['value' => $spotify->session->getRefreshToken()]
         );
 
-        return redirect('nova/nova-spotify-auth-resource-tool');
+        return redirect('nova/nova-spotify-auth-tool');
     }
 }

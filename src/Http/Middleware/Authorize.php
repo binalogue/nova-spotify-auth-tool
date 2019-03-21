@@ -1,8 +1,8 @@
 <?php
 
-namespace Mgoigfer\SpotifyAuthResourceTool\Http\Middleware;
+namespace Binalogue\SpotifyAuthTool\Http\Middleware;
 
-use Mgoigfer\SpotifyAuthResourceTool\SpotifyAuthResourceTool;
+use Binalogue\SpotifyAuthTool\SpotifyAuthTool;
 
 class Authorize
 {
@@ -15,6 +15,6 @@ class Authorize
      */
     public function handle($request, $next)
     {
-        return resolve(SpotifyAuthResourceTool::class)->authorize($request) ? $next($request) : abort(403);
+        return resolve(SpotifyAuthTool::class)->authorize($request) ? $next($request) : abort(403);
     }
 }

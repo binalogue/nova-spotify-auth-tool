@@ -35,7 +35,7 @@ export default {
       });
       const me = await result.me();
 
-      Nova.request().post('/nova-vendor/nova-spotify-auth-resource-tool/spotify-users', {
+      Nova.request().post('/nova-vendor/nova-spotify-auth-tool/spotify-users', {
         spotify_id: me.id,
         name: me.name,
         email: me.email,

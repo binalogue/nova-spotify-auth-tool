@@ -1,10 +1,10 @@
 <?php
 
-namespace Mgoigfer\SpotifyAuthResourceTool\Http\Controllers;
+namespace Binalogue\SpotifyAuthTool\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
-use Mgoigfer\SpotifyAuthResourceTool\Models\SpotifyUser;
+use Binalogue\SpotifyAuthTool\Models\SpotifyUser;
 
 class SpotifyUserController extends Controller
 {

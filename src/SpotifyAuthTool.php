@@ -1,11 +1,11 @@
 <?php
 
-namespace Mgoigfer\SpotifyAuthResourceTool;
+namespace Binalogue\SpotifyAuthTool;
 
 use Laravel\Nova\Nova;
 use Laravel\Nova\Tool;
 
-class SpotifyAuthResourceTool extends Tool
+class SpotifyAuthTool extends Tool
 {
     /**
      * Perform any tasks that need to happen when the tool is booted.
@@ -14,8 +14,8 @@ class SpotifyAuthResourceTool extends Tool
      */
     public function boot()
     {
-        Nova::script('nova-spotify-auth-resource-tool', __DIR__.'/../dist/js/tool.js');
-        Nova::style('nova-spotify-auth-resource-tool', __DIR__.'/../dist/css/tool.css');
+        Nova::script('nova-spotify-auth-tool', __DIR__.'/../dist/js/tool.js');
+        Nova::style('nova-spotify-auth-tool', __DIR__.'/../dist/css/tool.css');
     }
 
     /**
@@ -25,6 +25,6 @@ class SpotifyAuthResourceTool extends Tool
      */
     public function renderNavigation()
     {
-        return view('nova-spotify-auth-resource-tool::navigation');
+        return view('nova-spotify-auth-tool::navigation');
     }
 }

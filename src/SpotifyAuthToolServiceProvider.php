@@ -1,14 +1,14 @@
 <?php
 
-namespace Mgoigfer\SpotifyAuthResourceTool;
+namespace Binalogue\SpotifyAuthTool;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 use Laravel\Nova\Events\ServingNova;
 use Laravel\Nova\Nova;
-use Mgoigfer\SpotifyAuthResourceTool\Http\Middleware\Authorize;
+use Binalogue\SpotifyAuthTool\Http\Middleware\Authorize;
 
-class SpotifyAuthResourceToolServiceProvider extends ServiceProvider
+class SpotifyAuthToolServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap any application services.
@@ -23,7 +23,7 @@ class SpotifyAuthResourceToolServiceProvider extends ServiceProvider
             ], 'migrations');
         }
 
-        $this->loadViewsFrom(__DIR__.'/../resources/views', 'nova-spotify-auth-resource-tool');
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'nova-spotify-auth-tool');
 
         $this->app->booted(function () {
             $this->routes();
@@ -46,11 +46,11 @@ class SpotifyAuthResourceToolServiceProvider extends ServiceProvider
         }
 
         Route::middleware(['nova', Authorize::class])
-            ->prefix('nova-vendor/nova-spotify-auth-resource-tool')
+            ->prefix('nova-vendor/nova-spotify-auth-tool')
             ->group(__DIR__.'/../routes/web.php');
 
         Route::middleware(['nova', Authorize::class])
-            ->prefix('nova-vendor/nova-spotify-auth-resource-tool')
+            ->prefix('nova-vendor/nova-spotify-auth-tool')
             ->group(__DIR__.'/../routes/api.php');
     }
 

@@ -1,5 +1,5 @@
 {
-    "name": "mgoigfer/nova-spotify-auth-resource-tool",
+    "name": "binalogue/nova-spotify-auth-tool",
     "description": "A Spotify auth tool to use in your Laravel Nova apps.",
     "keywords": [
         "laravel",
@@ -7,7 +7,7 @@
         "spotify",
         "package"
     ],
-    "homepage": "https://github.com/mgoigfer/nova-spotify-auth-resource-tool",
+    "homepage": "https://github.com/binalogue/nova-spotify-auth-tool",
     "license": "MIT",
     "type": "package",
     "authors": [
@@ -21,13 +21,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Mgoigfer\\SpotifyAuthResourceTool\\": "src/"
+            "Binalogue\\SpotifyAuthTool\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Mgoigfer\\SpotifyAuthResourceTool\\SpotifyAuthResourceToolServiceProvider"
+                "Binalogue\\SpotifyAuthTool\\SpotifyAuthToolServiceProvider"
             ]
         }
     },
